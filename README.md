@@ -10,4 +10,4 @@ To use it, take the following steps:
 
 2. Install the [https://rg3.github.io/youtube-dl/](youtube-dl) program with `sudo apt-get install youtube-dl` (for Ubuntu / Debian-based Linux distros) or `brew install youtube-dl` for Mac. 
 
-3. 
+3. https://raw.githubusercontent.com/MaxPleaner/youtube-audio-downloader/master/ydl-audio.rb
