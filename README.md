@@ -19,3 +19,9 @@ It should work on Linux and Mac.
 ## How to use
 
 Once installed, enter `youtube-audio` in a terminal and follow the instructions that show up there. 
+
+## Notes
+
+Usually `control+V` doesn't work to paste inside terminals, so to avoid typing out long URLs right click in the terminal and press paste or try `control+shift+V`. Also, on some systems (like OSX), text highlighted in the terminal will automatically be copied (overwriting what was already copied), which can be annoying if it happens unexpectedly.
+
+While the download is in progress, an mp3 and m4a file will be found in the destination directory. The m4a file will be automatically deleted (the audio is extracted from the m4a video and the m4a file is unnecessary afterward).Also, the mp3 file will be incomplete / corrupted if it is opened before the process is completed. 
