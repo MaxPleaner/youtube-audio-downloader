@@ -12,7 +12,7 @@ It should work on Linux and Mac.
 
 3. Open the youtube-audio script [here](https://raw.githubusercontent.com/MaxPleaner/youtube-audio-downloader/master/youtube-audio) in your browser and save it to your `Downloads` folder.
 
-4. Enter the following command to make the file executable: `chmod +x ~/Downloads/ydl-audio`
+4. Enter the following command to make the file executable: `chmod +x ~/Downloads/youtube-audio`
 
 5. So that the command will be available anywhere on your computer, move the script to /usr/bin with the following command: `sudo mv ~/Downloads/youtube-audio /usr/bin/youtube-audio`
 
