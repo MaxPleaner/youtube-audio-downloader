@@ -16,7 +16,6 @@ It should work on Linux and Mac.
 ```txt
 chmod +x ~/Downloads/youtube-audio
 ```
-
 5. So that the command will be available anywhere on your computer, move the script to /usr/bin with the following command:
 ```txt
 sudo mv ~/Downloads/youtube-audio /usr/bin/youtube-audio
@@ -31,3 +30,5 @@ Once installed, enter `youtube-audio` in a terminal and follow the instructions 
 Usually `control+V` doesn't work to paste inside terminals, so to avoid typing out long URLs right click in the terminal and press paste or try `control+shift+V`. Also, on some systems (like OSX), text highlighted in the terminal will automatically be copied (overwriting what was already copied), which can be annoying if it happens unexpectedly.
 
 While the download is in progress, an mp3 and m4a file will be found in the destination directory. The m4a file will be automatically deleted (the audio is extracted from the m4a video and the m4a file is unnecessary afterward).Also, the mp3 file will be incomplete / corrupted if it is opened before the process is completed. 
+
+Unlike a lot of the websites which get audio from youtube, this program doesn't have any limits on the length of the video, so it's easy to download full albums when all the songs are in a single video. It's also possible to download every video in a playlist automatically. I need to add a little code for this feature to work but I'll do it soon. 
