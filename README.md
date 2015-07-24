@@ -27,6 +27,10 @@ Once installed, enter `youtube-audio` in a terminal and follow the instructions 
 
 Press control + C to quit at any time. 
 
+## Optional
+
+You can use `ya` to start the program instead of `youtube-audio` by entering the following command: `echo "alias ya='youtube-audio'" >> ~/.bashrc; bash`
+
 ## Notes
 
 Usually `control+V` doesn't work to paste inside terminals, so to avoid typing out long URLs right click in the terminal and press paste or try `control+shift+V`. Also, on some systems (like OSX), text highlighted in the terminal will automatically be copied (overwriting what was already copied), which can be annoying if it happens unexpectedly.
