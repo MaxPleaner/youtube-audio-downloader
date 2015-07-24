@@ -1,6 +1,6 @@
 This is a script to download audio from youtube video url(s).
 
-It provides a CLI interface, so all the following commands should be entered into a Terminal.
+It provides a CLI interface (uses the terminal). All the following commands should be entered into a terminal.
 
 It should work on Linux and Mac.
 
