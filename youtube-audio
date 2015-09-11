@@ -1,6 +1,8 @@
-#!/usr/bin/ruby
+#!/home/max/.rvm/rubies/ruby-2.1.6/bin/ruby
 
-puts "\nYoutube Audio Downloader (https://github.com/MaxPleaner/youtube-audio-downloader)"
+require 'spinning_cursor'
+
+puts "\nYoutube Audio Downloader"
 
 puts "Enter a video URL and press enter:"
 urls = [gets.chomp]
@@ -10,6 +12,14 @@ puts more_urls_prompt
 until (next_url = gets.chomp).empty?
    urls << next_url
    puts more_urls_prompt
+end
+
+urls = urls.map do |url|
+	if url.match(/^www/)
+		"https://" + url
+	else
+		url
+	end
 end
 
 puts "\n Where should the mp3 files be saved? To use the default (~/Downloads), press enter without typing anything. To use the current directory, press . (period). To use any other directory, enter an absolute path."
@@ -25,8 +35,15 @@ end
 
 puts "OK, downloading #{urls.length} track(s) to #{destination_path}."
 urls.each_with_index do |url, index|
-  `cd #{destination_path} && youtube-dl --extract-audio --audio-format mp3 --audio-quality 3 #{url} >/dev/null`
-   puts "#{index + 1} downloaded"
+  SpinningCursor.run do
+	banner "downloading"
+	type :spinner
+	delay 0.10
+	action do
+	  `cd #{destination_path} && youtube-dl --extract-audio --prefer-ffmpeg --audio-format mp3 --audio-quality 3 #{url} >/dev/null`
+	end
+	message "#{index + 1} downloaded"
+  end
 end
 
 puts "done"   
