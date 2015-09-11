@@ -10,6 +10,8 @@ It should work on Linux and Mac.
 
 2. Install the [youtube-dl](https://rg3.github.io/youtube-dl/) program with `sudo apt-get install youtube-dl` (for Ubuntu / Debian-based Linux distros) or `brew install youtube-dl` for Mac. 
 
+3. Install the `spinning_cursor` gem with `gem install spinning_cursor`
+
 3. Open the youtube-audio script [here](https://raw.githubusercontent.com/MaxPleaner/youtube-audio-downloader/master/youtube-audio) in your browser and save it to your `Downloads` folder.
 
 4. Enter the following command to make the file executable:
