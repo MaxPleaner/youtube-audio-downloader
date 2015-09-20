@@ -31,7 +31,7 @@ Press control + C to quit at any time.
 
 ## Optional
 
-You can use `ya` to start the program instead of `youtube-audio` by entering the following command: `echo "alias ya='youtube-audio'" >> ~/.bashrc; bash`
+You can use `ya` to start the program instead of `youtube-audio` by entering the following command: `echo -e "\nalias ya='youtube-audio'" >> ~/.bashrc; bash`
 
 ## Notes
 
