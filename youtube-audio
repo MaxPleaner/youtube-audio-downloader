@@ -4,6 +4,10 @@ require 'spinning_cursor'
 
 puts "\nYoutube Audio Downloader"
 
+if ARGV.shift == "playlist"
+  is_playlist = true
+end
+
 puts "Enter a video URL and press enter:"
 urls = [gets.chomp]
 
@@ -40,7 +44,11 @@ urls.each_with_index do |url, index|
 	type :spinner
 	delay 0.10
 	action do
-	  `cd #{destination_path} && youtube-dl --extract-audio --prefer-ffmpeg --audio-format mp3 --audio-quality 3 #{url} >/dev/null`
+	  if is_playlist
+	    `cd #{destination_path} && youtube-dl --extract-audio --prefer-ffmpeg --audio-format mp3 --audio-quality 3 #{url} >/dev/null`
+	  else
+	    `cd #{destination_path} && youtube-dl --extract-audio --prefer-ffmpeg --audio-format mp3 --yes-playlist --audio-quality 3 #{url} >/dev/null`
+	  end
 	end
 	message "#{index + 1} downloaded"
   end
