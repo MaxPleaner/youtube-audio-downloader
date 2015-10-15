@@ -26,7 +26,9 @@ To download playlists:
 
 ## Optional
 
-You can use `ya` to start the program instead of `youtube-audio` by entering the following command: `echo -e "\nalias ya='youtube-audio'" >> ~/.bashrc; bash`
+Add the program's directory to `$PATH` to be able to start it from anywhere.
+
+To use `ya` to start the program instead of `youtube-audio`, enter the following command: `echo -e "\nalias ya='youtube-audio'" >> ~/.bashrc; bash`
 
 ## Notes
 
