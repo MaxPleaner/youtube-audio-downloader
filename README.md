@@ -14,7 +14,7 @@ Clone the repo and `cd` into the directory
 
 `chmod +x youtube-audio` to change the permissions on the script to executable.
 
-`./youtube-audio` in a terminal and follow the instructions that show up there. 
+`./youtube-audio` and  follow the instructions that show up there. 
 
 Press control + C to quit at any time. 
 
