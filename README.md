@@ -8,8 +8,6 @@ It uses a command line interface.
 
 2. Install the [youtube-dl](https://rg3.github.io/youtube-dl/) program with `sudo apt-get install youtube-dl` (for Ubuntu / Debian-based Linux distros) or `brew install youtube-dl` for Mac. 
 
-```
-
 ## How to use
 
 Clone the repo and `cd` into the directory
