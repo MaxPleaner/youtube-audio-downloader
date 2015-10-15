@@ -30,6 +30,9 @@ Add the program's directory to `$PATH` to be able to start it from anywhere.
 
 To use `ya` to start the program instead of `youtube-audio`, enter the following command: `echo -e "\nalias ya='youtube-audio'" >> ~/.bashrc; bash`
 
+If you want to change the audio quality or other options, see the documentation for `youtube-dl`. The program's options are specified  near the
+end of the script, in SpinningCursor's `action do` block. p
+
 ## Notes
 
 Usually `control+V` doesn't work to paste inside terminals, so to avoid typing out long URLs right click in the terminal and press paste or try `control+shift+V`. Also, on some systems (like OSX), text highlighted in the terminal will automatically be copied (overwriting what was already copied), which can be annoying if it happens unexpectedly.
