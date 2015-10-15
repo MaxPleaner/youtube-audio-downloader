@@ -10,7 +10,7 @@ It uses a command line interface.
 
 ## How to use
 
-Clone the repo and `cd` into the directory
+Clone the repo and `cd` into the directory. Run `bundle`.
 
 `chmod +x youtube-audio` to change the permissions on the script to executable.
 
