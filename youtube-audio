@@ -4,13 +4,16 @@ require 'spinning_cursor'
 
 puts "\nYoutube Audio Downloader"
 
+# CLI Arguments
 if ARGV.shift == "playlist"
   is_playlist = true
 end
 
+# Initial URL prompt
 puts "Enter a video URL and press enter:"
 urls = [gets.chomp]
 
+# Additional URLs prompt
 more_urls_prompt =  "\nIf there are no more URLs, press enter; otherwise, enter another URL and press enter:"
 puts more_urls_prompt
 until (next_url = gets.chomp).empty?
@@ -18,6 +21,7 @@ until (next_url = gets.chomp).empty?
    puts more_urls_prompt
 end
 
+# URL sanitation
 urls = urls.map do |url|
 	if url.match(/^www/)
 		"https://" + url
@@ -26,6 +30,7 @@ urls = urls.map do |url|
 	end
 end
 
+# Destination folder prompt
 puts "\n Where should the mp3 files be saved? To use the default (~/Downloads), press enter without typing anything. To use the current directory, press . (period). To use any other directory, enter an absolute path."
 destination_cmd = gets.chomp
 destination_path = case destination_cmd
@@ -37,6 +42,7 @@ else
    destination_cmd
 end
 
+# Download execution
 puts "OK, downloading #{urls.length} track(s) to #{destination_path}."
 urls.each_with_index do |url, index|
   SpinningCursor.run do
