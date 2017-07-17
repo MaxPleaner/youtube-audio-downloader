@@ -1,3 +1,3 @@
-module YoutubeAudioDownloader
-  VERSION = '1.0.0'
+class YoutubeAudioDownloader
+  VERSION = '1.0.1'
 end
