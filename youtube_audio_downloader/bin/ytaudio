@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+require 'youtube_audio_downloader'
+require 'thor'
+class YoutubeAudioDownloader::CLI < Thor
+  desc "get", "download an audio"
+  def get(url, out_dir, filename)
+    YoutubeAudioDownloader.download_audio(url, out_dir, filename)
+  end
+  desc "get_playlist", "download a playlist of audios"
+  def get_playlist(url, out_dir)
+    YoutubeAudioDownloader.download_audio(url, out_dir)
+  end  
+end
+YoutubeAudioDownloader::CLI.start ARGV

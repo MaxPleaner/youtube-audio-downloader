@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+Dir.glob("./*.gem").each { |path| `rm #{path}` }
+puts `gem uninstall -x youtube_audio_downloader`
+puts `gem build youtube_audio_downloader.gemspec`
+Dir.glob("./*.gem").each { |path| puts `gem install -f #{path}` }
